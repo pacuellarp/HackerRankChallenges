@@ -117,9 +117,29 @@ let maxNumInstructions = ()=>{
   };
 };
 
-
-console.log('');
-numberTestCasesQuestion(testCasesQuestion);
-
-
-
+rl.question('Do you need to know how the robot operates? (y/n)',(res)=>{
+  if(res=='y'){
+    console.log('');
+    console.log('NASA’s robot landed on Mars. The place where it landed can be modeled as an infinite 2-dimensional plane with perpendicular X-axis and Y-axis coordinates.');
+    console.log('');
+    console.log('In one of the space exploration missions, the robot sent a sequence of signals, which can be represented by a string composed of the following characters: ‘U’, ‘R’, ‘D’ or ‘L’. In uppercase and no spaces.');
+    console.log('');
+    console.log("‘U’ represents up (Y-coordinate increases by 1), ‘R’ represents right (X-coordinate increases by 1), ‘D’ represents down (Y-coordinate decreases by 1), ‘L’ represents left (X-coordinate decreases by 1).");
+    console.log('');
+    console.log("Every character in the sequence is a single step in the corresponding direction.");
+    console.log('');
+    console.log(`Here, you'll be able to ensure of the security of the robot. You can know the maximum distance from the base that the robot will be while following your instructions.`);
+    console.log('');
+    rl.pause();
+  }else if (res=='n'){
+    console.log('');
+    rl.pause();
+  }else{
+    console.log('');
+    console.log(`It should be a 'n', but ok.`);
+    console.log('');
+    rl.pause();
+  }
+  rl.resume();
+  numberTestCasesQuestion(testCasesQuestion);
+});
