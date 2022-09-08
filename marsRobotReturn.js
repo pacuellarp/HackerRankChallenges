@@ -114,6 +114,8 @@ let maxNumInstructions = ()=>{
   };
   for(var i=0;i<robot.numberTestCases;i++){
     console.log(`For ${robot.testCases[i]} instructions, the maximum distance from the initial position [0,0] is ${robot.distance[i]}, corresponding to coordinates [${robot.coordinates[i][0]},${robot.coordinates[i][1]}] in instruction number ${robot.point[i]}.`);
+    console.log('');
+
   };
 };
 
